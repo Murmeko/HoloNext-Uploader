@@ -11,8 +11,10 @@ import UniformTypeIdentifiers
 import QuickLook
 import ARKit
 
-class UploadModelViewController: UIViewController, UIDocumentPickerDelegate, QLPreviewControllerDataSource {
+class UploadModelViewController: UIViewController, UITextFieldDelegate, UIDocumentPickerDelegate, QLPreviewControllerDataSource {
+    @IBOutlet weak var logoutButton: UIBarButtonItem!
     @IBOutlet weak var modelnameTextField: UITextField!
+    @IBOutlet weak var uploadButton: UIButton!
     @IBOutlet weak var processingModelIndicator: UIActivityIndicatorView!
     @IBOutlet weak var displayModelButton: UIButton!
     
@@ -23,17 +25,24 @@ class UploadModelViewController: UIViewController, UIDocumentPickerDelegate, QLP
 
     var uploadModelViewModel = UploadModelViewModel()
 
-    var NM = NetworkManager()
+    var quickLookLocalUrl: URL?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.hidesBackButton = true
-        documentPickerController.delegate = self
-        processingModelIndicator.isHidden = true
-        previewController.dataSource = self
 
         uploadModelViewModel.token = loginToken
+
+        modelnameTextField.delegate = self
+        documentPickerController.delegate = self
+        previewController.dataSource = self
+
+        self.logoutButton.isEnabled = true
+        self.modelnameTextField.isEnabled = true
+        self.uploadButton.isEnabled = true
+        self.processingModelIndicator.isHidden = true
+        self.displayModelButton.isEnabled = false
     }
 
     @IBAction func logoutButtonPressed(_ sender: UIBarButtonItem) {
@@ -41,14 +50,8 @@ class UploadModelViewController: UIViewController, UIDocumentPickerDelegate, QLP
     }
 
     @IBAction func uploadButtonPressed(_ sender: UIButton) {
-        //self.present(documentPickerController, animated: true)
-        
-        self.uploadModelViewModel.checkSceneReady() {
-            DispatchQueue.main.async {
-                self.processingModelIndicator.stopAnimating()
-                self.processingModelIndicator.isHidden = true
-                self.displayModelButton.isEnabled = true
-            }
+        if modelnameTextField.text?.isEmpty != true {
+            self.present(documentPickerController, animated: true)
         }
     }
 
@@ -58,18 +61,31 @@ class UploadModelViewController: UIViewController, UIDocumentPickerDelegate, QLP
 
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
         uploadModelViewModel.selectedFileUrl = urls[0]
-        if modelnameTextField.text?.isEmpty != true {
-            uploadModelViewModel.uploadModel(sceneName: modelnameTextField.text!, fileName: urls[0].lastPathComponent, file: try! Data(contentsOf: urls[0])) {
-                self.displayModelButton.isEnabled = false
-                self.processingModelIndicator.isHidden = false
-                self.processingModelIndicator.startAnimating()
-                self.uploadModelViewModel.checkSceneReady() {
-                    DispatchQueue.main.async {
-                        self.processingModelIndicator.stopAnimating()
-                        self.processingModelIndicator.isHidden = true
-                        self.displayModelButton.isEnabled = true
-                    }
-                    self.performSegue(withIdentifier: K.uploadModelToQuickLookSegue, sender: self)
+
+        let canAccess = urls[0].startAccessingSecurityScopedResource()
+        guard canAccess else {
+            return
+        }
+        let fileData = try! Data(contentsOf: urls[0])
+        urls[0].stopAccessingSecurityScopedResource()
+
+        uploadModelViewModel.uploadModel(sceneName: modelnameTextField.text!, fileName: urls[0].lastPathComponent, file: fileData) {
+            self.logoutButton.isEnabled = false
+            self.modelnameTextField.isEnabled = false
+            self.uploadButton.isEnabled = false
+            self.processingModelIndicator.isHidden = false
+            self.displayModelButton.isEnabled = false
+            self.processingModelIndicator.startAnimating()
+
+            self.uploadModelViewModel.checkSceneReady() { url in
+                self.quickLookLocalUrl = url
+                DispatchQueue.main.async {
+                    self.processingModelIndicator.stopAnimating()
+                    self.displayModelButton.isEnabled = true
+                    self.processingModelIndicator.isHidden = true
+                    self.uploadButton.isEnabled = true
+                    self.modelnameTextField.isEnabled = true
+                    self.logoutButton.isEnabled = true
                 }
             }
         }
@@ -80,6 +96,11 @@ class UploadModelViewController: UIViewController, UIDocumentPickerDelegate, QLP
     }
 
     func previewController(_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
-        return uploadModelViewModel.selectedFileUrl! as QLPreviewItem
+        return quickLookLocalUrl! as QLPreviewItem
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 }

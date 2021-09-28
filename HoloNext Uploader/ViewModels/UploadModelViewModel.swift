@@ -12,7 +12,6 @@ class UploadModelViewModel {
     var token: String?
     var selectedFileUrl: URL?
     var sceneId: String?
-    var convertedSceneUrl: URL?
     var isConverted: Bool?
 
     var networkManager = NetworkManager()
@@ -33,15 +32,14 @@ class UploadModelViewModel {
         }
     }
     
-    func checkSceneReady(completion: @escaping () -> Void) {
+    func checkSceneReady(completion: @escaping (URL) -> ()) {
         isConverted = false
         Timer.scheduledTimer(withTimeInterval: 15.0, repeats: true) { timer in
-            self.networkManager.checkScene(self.token!, "615295f847e98d0032564712") { checkSceneResult in
+            self.networkManager.checkScene(self.token!, self.sceneId!) { checkSceneResult in
                 if checkSceneResult?.body?.usdzModel?.isEmpty != true {
                     self.networkManager.downloadConvertedScene(url: (checkSceneResult?.body?.usdzModel)!) { url in
-                        self.convertedSceneUrl = url
                         timer.invalidate()
-                        completion()
+                        completion(url)
                     }
                 }
             }

@@ -20,7 +20,6 @@
 		1BDEE5F0270270A400F7BD7A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDEE5EF270270A400F7BD7A /* Constants.swift */; };
 		1BDEE5F42702739200F7BD7A /* UploadModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDEE5F32702739200F7BD7A /* UploadModelViewController.swift */; };
 		1BDEE5F727028F0400F7BD7A /* GetFileUploadUrlModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDEE5F627028F0400F7BD7A /* GetFileUploadUrlModel.swift */; };
-		1BDEE5F927029FB600F7BD7A /* CompleteFileUploadUrlModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDEE5F827029FB600F7BD7A /* CompleteFileUploadUrlModel.swift */; };
 		1BDEE5FB2702A0D000F7BD7A /* CheckSceneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDEE5FA2702A0D000F7BD7A /* CheckSceneModel.swift */; };
 		1BE40A7526FEA82B00B08D50 /* HoloNextAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE40A7426FEA82B00B08D50 /* HoloNextAPI.swift */; };
 		1BE40A7926FEA95D00B08D50 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE40A7826FEA95D00B08D50 /* LoginModel.swift */; };
@@ -68,7 +67,6 @@
 		1BDEE5F32702739200F7BD7A /* UploadModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadModelViewController.swift; sourceTree = "<group>"; };
 		1BDEE5F527027BD000F7BD7A /* HoloNext Uploader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HoloNext Uploader.entitlements"; sourceTree = "<group>"; };
 		1BDEE5F627028F0400F7BD7A /* GetFileUploadUrlModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFileUploadUrlModel.swift; sourceTree = "<group>"; };
-		1BDEE5F827029FB600F7BD7A /* CompleteFileUploadUrlModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteFileUploadUrlModel.swift; sourceTree = "<group>"; };
 		1BDEE5FA2702A0D000F7BD7A /* CheckSceneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckSceneModel.swift; sourceTree = "<group>"; };
 		1BE40A7426FEA82B00B08D50 /* HoloNextAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoloNextAPI.swift; sourceTree = "<group>"; };
 		1BE40A7826FEA95D00B08D50 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
@@ -204,7 +202,6 @@
 				1BE40A7826FEA95D00B08D50 /* LoginModel.swift */,
 				1BEEF63A26FF9918008ABAB4 /* CreateSceneModel.swift */,
 				1BDEE5F627028F0400F7BD7A /* GetFileUploadUrlModel.swift */,
-				1BDEE5F827029FB600F7BD7A /* CompleteFileUploadUrlModel.swift */,
 				1BDEE5FA2702A0D000F7BD7A /* CheckSceneModel.swift */,
 			);
 			path = Models;
@@ -500,7 +497,6 @@
 				1BE40A7D26FEAF1100B08D50 /* LoginViewController.swift in Sources */,
 				1BDEE5F42702739200F7BD7A /* UploadModelViewController.swift in Sources */,
 				1BE40A7B26FEA9B800B08D50 /* NetworkManager.swift in Sources */,
-				1BDEE5F927029FB600F7BD7A /* CompleteFileUploadUrlModel.swift in Sources */,
 				1BDEE5F727028F0400F7BD7A /* GetFileUploadUrlModel.swift in Sources */,
 				1BE40A7926FEA95D00B08D50 /* LoginModel.swift in Sources */,
 				1BD9DC0826FEA51B000063A4 /* AppDelegate.swift in Sources */,
@@ -617,7 +613,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -672,7 +668,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

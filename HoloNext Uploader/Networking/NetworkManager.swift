@@ -20,7 +20,7 @@ struct NetworkManager {
     typealias DownloadConvertedSceneCompletion = (URL) -> ()
 
     func login(username: String, password: String, completion: @escaping LoginDataCompletion) {
-        holoNextAPIProvider.request(.loginRequest("iOStest@holonext.com", "12345678!")) { result in
+        holoNextAPIProvider.request(.loginRequest(username, password)) { result in
             switch result {
             case .success(let data):
                 do {
@@ -68,7 +68,6 @@ struct NetworkManager {
     }
 
     func getFileUploadUrl(_ token: String, sceneId: String, fileName: String, completion: @escaping GetFileUploadUrlCompletion) {
-        print(sceneId)
         holoNextAPIProvider.request(.getFileUploadUrlRequest(token, sceneId, fileName)) { result in
             switch result {
             case .success(let data):
@@ -114,19 +113,11 @@ struct NetworkManager {
         }.resume()
     }
 
-    func completeFileUploadUrl(_ token: String, modelId: String, fileName: String, completion: @escaping CompleteFileUploadUrlCompletion) {
+    func completeFileUploadUrl(_ token: String, modelId: String, fileName: String, completion: @escaping (Bool) -> ()) {
         holoNextAPIProvider.request(.completeFileUploadUrl(token, modelId, fileName)) { result in
             switch result {
-            case .success(let data):
-                do {
-                    try data.filterSuccessfulStatusCodes()
-                    completion(true)
-                }
-                catch let error {
-                    print("Unable to decode HoloNextAPI response: \(error.localizedDescription)")
-                    completion(false)
-                    return
-                }
+            case .success(_):
+                completion(true)
             case .failure(let error):
                 print(error.localizedDescription)
                 completion(false)
