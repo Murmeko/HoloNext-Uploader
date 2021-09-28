@@ -1,0 +1,6 @@
+framework module Pods_HoloNext_Uploader_HoloNext_UploaderUITests {
+  umbrella header "Pods-HoloNext Uploader-HoloNext UploaderUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
