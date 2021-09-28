@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1BD9DC0826FEA51B000063A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9DC0726FEA51B000063A4 /* AppDelegate.swift */; };
 		1BD9DC0A26FEA51B000063A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9DC0926FEA51B000063A4 /* SceneDelegate.swift */; };
-		1BD9DC0C26FEA51B000063A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9DC0B26FEA51B000063A4 /* ViewController.swift */; };
 		1BD9DC0F26FEA51B000063A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BD9DC0D26FEA51B000063A4 /* Main.storyboard */; };
 		1BD9DC1226FEA51B000063A4 /* HoloNext_Uploader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9DC1026FEA51B000063A4 /* HoloNext_Uploader.xcdatamodeld */; };
 		1BD9DC1426FEA51D000063A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BD9DC1326FEA51D000063A4 /* Assets.xcassets */; };
@@ -17,6 +16,20 @@
 		1BD9DC2226FEA51D000063A4 /* HoloNext_UploaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9DC2126FEA51D000063A4 /* HoloNext_UploaderTests.swift */; };
 		1BD9DC2C26FEA51D000063A4 /* HoloNext_UploaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9DC2B26FEA51D000063A4 /* HoloNext_UploaderUITests.swift */; };
 		1BD9DC2E26FEA51D000063A4 /* HoloNext_UploaderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9DC2D26FEA51D000063A4 /* HoloNext_UploaderUITestsLaunchTests.swift */; };
+		1BDEE5EE2702277E00F7BD7A /* UploadModelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDEE5ED2702277E00F7BD7A /* UploadModelViewModel.swift */; };
+		1BDEE5F0270270A400F7BD7A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDEE5EF270270A400F7BD7A /* Constants.swift */; };
+		1BDEE5F42702739200F7BD7A /* UploadModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDEE5F32702739200F7BD7A /* UploadModelViewController.swift */; };
+		1BDEE5F727028F0400F7BD7A /* GetFileUploadUrlModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDEE5F627028F0400F7BD7A /* GetFileUploadUrlModel.swift */; };
+		1BDEE5F927029FB600F7BD7A /* CompleteFileUploadUrlModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDEE5F827029FB600F7BD7A /* CompleteFileUploadUrlModel.swift */; };
+		1BDEE5FB2702A0D000F7BD7A /* CheckSceneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDEE5FA2702A0D000F7BD7A /* CheckSceneModel.swift */; };
+		1BE40A7526FEA82B00B08D50 /* HoloNextAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE40A7426FEA82B00B08D50 /* HoloNextAPI.swift */; };
+		1BE40A7926FEA95D00B08D50 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE40A7826FEA95D00B08D50 /* LoginModel.swift */; };
+		1BE40A7B26FEA9B800B08D50 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE40A7A26FEA9B800B08D50 /* NetworkManager.swift */; };
+		1BE40A7D26FEAF1100B08D50 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE40A7C26FEAF1100B08D50 /* LoginViewController.swift */; };
+		1BEEF63B26FF9918008ABAB4 /* CreateSceneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEEF63A26FF9918008ABAB4 /* CreateSceneModel.swift */; };
+		274BC37E74B44B67BA2CBE63 /* Pods_HoloNext_Uploader_HoloNext_UploaderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59906921578DBCD1DAD7625 /* Pods_HoloNext_Uploader_HoloNext_UploaderUITests.framework */; };
+		5A51EB25EF9279E22F067443 /* Pods_HoloNext_Uploader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC0090A667E755CE4AD4DBF /* Pods_HoloNext_Uploader.framework */; };
+		67D1910AD285F8C14217FE19 /* Pods_HoloNext_UploaderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469A5F52048DB894101071 /* Pods_HoloNext_UploaderTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +53,6 @@
 		1BD9DC0426FEA51B000063A4 /* HoloNext Uploader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HoloNext Uploader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BD9DC0726FEA51B000063A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BD9DC0926FEA51B000063A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1BD9DC0B26FEA51B000063A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1BD9DC0E26FEA51B000063A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1BD9DC1126FEA51B000063A4 /* HoloNext_Uploader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HoloNext_Uploader.xcdatamodel; sourceTree = "<group>"; };
 		1BD9DC1326FEA51D000063A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +63,27 @@
 		1BD9DC2726FEA51D000063A4 /* HoloNext UploaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HoloNext UploaderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BD9DC2B26FEA51D000063A4 /* HoloNext_UploaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoloNext_UploaderUITests.swift; sourceTree = "<group>"; };
 		1BD9DC2D26FEA51D000063A4 /* HoloNext_UploaderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoloNext_UploaderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1BDEE5ED2702277E00F7BD7A /* UploadModelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadModelViewModel.swift; sourceTree = "<group>"; };
+		1BDEE5EF270270A400F7BD7A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1BDEE5F32702739200F7BD7A /* UploadModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadModelViewController.swift; sourceTree = "<group>"; };
+		1BDEE5F527027BD000F7BD7A /* HoloNext Uploader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HoloNext Uploader.entitlements"; sourceTree = "<group>"; };
+		1BDEE5F627028F0400F7BD7A /* GetFileUploadUrlModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFileUploadUrlModel.swift; sourceTree = "<group>"; };
+		1BDEE5F827029FB600F7BD7A /* CompleteFileUploadUrlModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteFileUploadUrlModel.swift; sourceTree = "<group>"; };
+		1BDEE5FA2702A0D000F7BD7A /* CheckSceneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckSceneModel.swift; sourceTree = "<group>"; };
+		1BE40A7426FEA82B00B08D50 /* HoloNextAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoloNextAPI.swift; sourceTree = "<group>"; };
+		1BE40A7826FEA95D00B08D50 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		1BE40A7A26FEA9B800B08D50 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		1BE40A7C26FEAF1100B08D50 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1BEEF63A26FF9918008ABAB4 /* CreateSceneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSceneModel.swift; sourceTree = "<group>"; };
+		204FED4E365EF0C741235203 /* Pods-HoloNext Uploader-HoloNext UploaderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloNext Uploader-HoloNext UploaderUITests.debug.xcconfig"; path = "Target Support Files/Pods-HoloNext Uploader-HoloNext UploaderUITests/Pods-HoloNext Uploader-HoloNext UploaderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		25469A5F52048DB894101071 /* Pods_HoloNext_UploaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloNext_UploaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BAA7E2FB0C26C28F1C1D65C /* Pods-HoloNext Uploader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloNext Uploader.debug.xcconfig"; path = "Target Support Files/Pods-HoloNext Uploader/Pods-HoloNext Uploader.debug.xcconfig"; sourceTree = "<group>"; };
+		3C899B55E7341D01A506FD10 /* Pods-HoloNext Uploader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloNext Uploader.release.xcconfig"; path = "Target Support Files/Pods-HoloNext Uploader/Pods-HoloNext Uploader.release.xcconfig"; sourceTree = "<group>"; };
+		4062922F09AD5E26C195EAC2 /* Pods-HoloNext Uploader-HoloNext UploaderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloNext Uploader-HoloNext UploaderUITests.release.xcconfig"; path = "Target Support Files/Pods-HoloNext Uploader-HoloNext UploaderUITests/Pods-HoloNext Uploader-HoloNext UploaderUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6971F3702C561E2E33AE8B46 /* Pods-HoloNext UploaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloNext UploaderTests.debug.xcconfig"; path = "Target Support Files/Pods-HoloNext UploaderTests/Pods-HoloNext UploaderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6FC0090A667E755CE4AD4DBF /* Pods_HoloNext_Uploader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloNext_Uploader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96BB7A9009FB2DB347ED2BE4 /* Pods-HoloNext UploaderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloNext UploaderTests.release.xcconfig"; path = "Target Support Files/Pods-HoloNext UploaderTests/Pods-HoloNext UploaderTests.release.xcconfig"; sourceTree = "<group>"; };
+		A59906921578DBCD1DAD7625 /* Pods_HoloNext_Uploader_HoloNext_UploaderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloNext_Uploader_HoloNext_UploaderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A51EB25EF9279E22F067443 /* Pods_HoloNext_Uploader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67D1910AD285F8C14217FE19 /* Pods_HoloNext_UploaderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				274BC37E74B44B67BA2CBE63 /* Pods_HoloNext_Uploader_HoloNext_UploaderUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +121,8 @@
 				1BD9DC2026FEA51D000063A4 /* HoloNext UploaderTests */,
 				1BD9DC2A26FEA51D000063A4 /* HoloNext UploaderUITests */,
 				1BD9DC0526FEA51B000063A4 /* Products */,
+				E46F9AE342B17C92D32A8D0E /* Pods */,
+				4672CE4F6C6BA73F527A8C17 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +139,18 @@
 		1BD9DC0626FEA51B000063A4 /* HoloNext Uploader */ = {
 			isa = PBXGroup;
 			children = (
+				1BDEE5F527027BD000F7BD7A /* HoloNext Uploader.entitlements */,
 				1BD9DC0726FEA51B000063A4 /* AppDelegate.swift */,
 				1BD9DC0926FEA51B000063A4 /* SceneDelegate.swift */,
-				1BD9DC0B26FEA51B000063A4 /* ViewController.swift */,
-				1BD9DC0D26FEA51B000063A4 /* Main.storyboard */,
-				1BD9DC1326FEA51D000063A4 /* Assets.xcassets */,
 				1BD9DC1526FEA51D000063A4 /* LaunchScreen.storyboard */,
 				1BD9DC1826FEA51D000063A4 /* Info.plist */,
 				1BD9DC1026FEA51B000063A4 /* HoloNext_Uploader.xcdatamodeld */,
+				1BE40A7626FEA89700B08D50 /* Constants */,
+				1BE40A7326FEA7FC00B08D50 /* Controllers */,
+				1BE40A6F26FEA7DA00B08D50 /* Networking */,
+				1BE40A7726FEA8B800B08D50 /* Resources */,
+				1BE40A7126FEA7EE00B08D50 /* Views */,
+				1BE40A7026FEA7E400B08D50 /* ViewModels */,
 			);
 			path = "HoloNext Uploader";
 			sourceTree = "<group>";
@@ -130,6 +172,92 @@
 			path = "HoloNext UploaderUITests";
 			sourceTree = "<group>";
 		};
+		1BE40A6F26FEA7DA00B08D50 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1BE40A7226FEA7F600B08D50 /* Models */,
+				1BE40A7426FEA82B00B08D50 /* HoloNextAPI.swift */,
+				1BE40A7A26FEA9B800B08D50 /* NetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		1BE40A7026FEA7E400B08D50 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1BDEE5ED2702277E00F7BD7A /* UploadModelViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1BE40A7126FEA7EE00B08D50 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1BD9DC0D26FEA51B000063A4 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1BE40A7226FEA7F600B08D50 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1BE40A7826FEA95D00B08D50 /* LoginModel.swift */,
+				1BEEF63A26FF9918008ABAB4 /* CreateSceneModel.swift */,
+				1BDEE5F627028F0400F7BD7A /* GetFileUploadUrlModel.swift */,
+				1BDEE5F827029FB600F7BD7A /* CompleteFileUploadUrlModel.swift */,
+				1BDEE5FA2702A0D000F7BD7A /* CheckSceneModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1BE40A7326FEA7FC00B08D50 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1BE40A7C26FEAF1100B08D50 /* LoginViewController.swift */,
+				1BDEE5F32702739200F7BD7A /* UploadModelViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1BE40A7626FEA89700B08D50 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				1BDEE5EF270270A400F7BD7A /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		1BE40A7726FEA8B800B08D50 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1BD9DC1326FEA51D000063A4 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4672CE4F6C6BA73F527A8C17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6FC0090A667E755CE4AD4DBF /* Pods_HoloNext_Uploader.framework */,
+				A59906921578DBCD1DAD7625 /* Pods_HoloNext_Uploader_HoloNext_UploaderUITests.framework */,
+				25469A5F52048DB894101071 /* Pods_HoloNext_UploaderTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E46F9AE342B17C92D32A8D0E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2BAA7E2FB0C26C28F1C1D65C /* Pods-HoloNext Uploader.debug.xcconfig */,
+				3C899B55E7341D01A506FD10 /* Pods-HoloNext Uploader.release.xcconfig */,
+				204FED4E365EF0C741235203 /* Pods-HoloNext Uploader-HoloNext UploaderUITests.debug.xcconfig */,
+				4062922F09AD5E26C195EAC2 /* Pods-HoloNext Uploader-HoloNext UploaderUITests.release.xcconfig */,
+				6971F3702C561E2E33AE8B46 /* Pods-HoloNext UploaderTests.debug.xcconfig */,
+				96BB7A9009FB2DB347ED2BE4 /* Pods-HoloNext UploaderTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +265,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BD9DC3126FEA51D000063A4 /* Build configuration list for PBXNativeTarget "HoloNext Uploader" */;
 			buildPhases = (
+				F87A747C56504E308C561272 /* [CP] Check Pods Manifest.lock */,
 				1BD9DC0026FEA51B000063A4 /* Sources */,
 				1BD9DC0126FEA51B000063A4 /* Frameworks */,
 				1BD9DC0226FEA51B000063A4 /* Resources */,
+				9C22F6E3EDD6D0516AA04EE8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +284,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BD9DC3426FEA51D000063A4 /* Build configuration list for PBXNativeTarget "HoloNext UploaderTests" */;
 			buildPhases = (
+				BC68472660669CA60D592322 /* [CP] Check Pods Manifest.lock */,
 				1BD9DC1926FEA51D000063A4 /* Sources */,
 				1BD9DC1A26FEA51D000063A4 /* Frameworks */,
 				1BD9DC1B26FEA51D000063A4 /* Resources */,
@@ -172,9 +303,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BD9DC3726FEA51D000063A4 /* Build configuration list for PBXNativeTarget "HoloNext UploaderUITests" */;
 			buildPhases = (
+				24D029A1F75BD5BF0B928C10 /* [CP] Check Pods Manifest.lock */,
 				1BD9DC2326FEA51D000063A4 /* Sources */,
 				1BD9DC2426FEA51D000063A4 /* Frameworks */,
 				1BD9DC2526FEA51D000063A4 /* Resources */,
+				5F09920738CF38349EDEC54D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,15 +389,128 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		24D029A1F75BD5BF0B928C10 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HoloNext Uploader-HoloNext UploaderUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F09920738CF38349EDEC54D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HoloNext Uploader-HoloNext UploaderUITests/Pods-HoloNext Uploader-HoloNext UploaderUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HoloNext Uploader-HoloNext UploaderUITests/Pods-HoloNext Uploader-HoloNext UploaderUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HoloNext Uploader-HoloNext UploaderUITests/Pods-HoloNext Uploader-HoloNext UploaderUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C22F6E3EDD6D0516AA04EE8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HoloNext Uploader/Pods-HoloNext Uploader-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HoloNext Uploader/Pods-HoloNext Uploader-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HoloNext Uploader/Pods-HoloNext Uploader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC68472660669CA60D592322 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HoloNext UploaderTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F87A747C56504E308C561272 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HoloNext Uploader-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1BD9DC0026FEA51B000063A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BD9DC0C26FEA51B000063A4 /* ViewController.swift in Sources */,
+				1BE40A7D26FEAF1100B08D50 /* LoginViewController.swift in Sources */,
+				1BDEE5F42702739200F7BD7A /* UploadModelViewController.swift in Sources */,
+				1BE40A7B26FEA9B800B08D50 /* NetworkManager.swift in Sources */,
+				1BDEE5F927029FB600F7BD7A /* CompleteFileUploadUrlModel.swift in Sources */,
+				1BDEE5F727028F0400F7BD7A /* GetFileUploadUrlModel.swift in Sources */,
+				1BE40A7926FEA95D00B08D50 /* LoginModel.swift in Sources */,
 				1BD9DC0826FEA51B000063A4 /* AppDelegate.swift in Sources */,
+				1BDEE5FB2702A0D000F7BD7A /* CheckSceneModel.swift in Sources */,
+				1BEEF63B26FF9918008ABAB4 /* CreateSceneModel.swift in Sources */,
+				1BDEE5F0270270A400F7BD7A /* Constants.swift in Sources */,
 				1BD9DC1226FEA51B000063A4 /* HoloNext_Uploader.xcdatamodeld in Sources */,
 				1BD9DC0A26FEA51B000063A4 /* SceneDelegate.swift in Sources */,
+				1BE40A7526FEA82B00B08D50 /* HoloNextAPI.swift in Sources */,
+				1BDEE5EE2702277E00F7BD7A /* UploadModelViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,9 +684,11 @@
 		};
 		1BD9DC3226FEA51D000063A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BAA7E2FB0C26C28F1C1D65C /* Pods-HoloNext Uploader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "HoloNext Uploader/HoloNext Uploader.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 927YGY67XQ;
@@ -451,6 +699,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,9 +715,11 @@
 		};
 		1BD9DC3326FEA51D000063A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C899B55E7341D01A506FD10 /* Pods-HoloNext Uploader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "HoloNext Uploader/HoloNext Uploader.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 927YGY67XQ;
@@ -479,6 +730,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -494,6 +746,7 @@
 		};
 		1BD9DC3526FEA51D000063A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6971F3702C561E2E33AE8B46 /* Pods-HoloNext UploaderTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -519,6 +772,7 @@
 		};
 		1BD9DC3626FEA51D000063A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96BB7A9009FB2DB347ED2BE4 /* Pods-HoloNext UploaderTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -544,6 +798,7 @@
 		};
 		1BD9DC3826FEA51D000063A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 204FED4E365EF0C741235203 /* Pods-HoloNext Uploader-HoloNext UploaderUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -567,6 +822,7 @@
 		};
 		1BD9DC3926FEA51D000063A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4062922F09AD5E26C195EAC2 /* Pods-HoloNext Uploader-HoloNext UploaderUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
